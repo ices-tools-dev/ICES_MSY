@@ -20,7 +20,7 @@ Participants will be given access to this web interface for running SPiCT and ac
 
 ###	Length-based methods
 
-*	Mean-length Z
+*	Mean-length Z (Gedamke and Hoenig (2006))
  *	Data needed = time series of mean length (>full selection) in catch, length of full selection (estimated from catch length frequency data), growth parameters
  *	Assumptions = recruitment and fishery selection constant over time, fishery selection is steep and asymptotic
  *	Output = total mortality Z
@@ -29,7 +29,7 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Interpreting the results
 
 *	Length-based spawner per recruit (LB-SPR)
- *	Data needed = proportion-at-length in catch (in a single year) and biological parameters: Linf and M/K
+ *	Data needed = proportion-at-length in catch (in a single year) and biological parameters: L<sub>inf</sub> and M/K
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = estimates F/M and compares with reference points from Per-Recruit analysis (requires weight and maturity parameters). 
  *	Data format required
@@ -37,7 +37,7 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Interpreting the results
 
 *	Length-based indicators (LBI)
- *	Data needed = proportion-at-length in catch (single year), length at first capture in fishery (estimated from length frequency data), biological parameters (Linf and length-at-maturity)
+ *	Data needed = proportion-at-length in catch (single year), length at first capture in fishery (estimated from length frequency data), biological parameters (L<sub>inf</sub> and length-at-maturity)
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = Range of indicators and their expected values when exploitation is consistent with conservation of large and immature individuals, optimal yield and MSY
  *	Data format required
@@ -57,7 +57,7 @@ Participants will be given access to this web interface for running SPiCT and ac
 *	CMSY
  *  Data needed = time series of catch
  *  Assumptions = many
- *  Provides F/Fmsy and B/MSYBtrigger
+ *  Provides F/F<sub>MSY</sub> and B/MSY B<sub>trigger</sub>
  *  Data format required
  *  Running the model
  *	Interpreting the results
@@ -65,7 +65,7 @@ Participants will be given access to this web interface for running SPiCT and ac
 *	SPiCT
  *	Data needed = time series of catch (by weight) and biomass index
  *	Assumptions = constant fishery selectivity over time, biomass index proportional to exploitable stock biomass
- *	Provides F/Fmsy and B/MSYBtrigger
+ *	Provides F/F<sub>MSY</sub> and B/MSY B<sub>trigger</sub>
  *	Data format required
  *	Running the model
  *	Interpreting the results
