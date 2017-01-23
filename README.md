@@ -36,7 +36,7 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Running the model
  *	Interpreting the results
 
-*	Length-based indicators (LBI)
+*	Length-based indicators ([LBI](https://raw.githubusercontent.com/ices-tools-dev/ICES_MSY/master/R/LBindicators.R))
  *	Data needed = proportion-at-length in catch (single year), length at first capture in fishery (estimated from length frequency data), biological parameters (L<sub>inf</sub> and length-at-maturity)
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = Range of indicators and their expected values when exploitation is consistent with conservation of large and immature individuals, optimal yield and MSY
