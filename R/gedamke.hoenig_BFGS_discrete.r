@@ -20,7 +20,7 @@ return_LL <- function(x, dat, nbreaks, K, Linf, Lc) {
   
   nyr <- length(!is.na(Lbar))
   count <- length(year)
-    
+  
   dy <- array(0, dim = c(nbreaks, count))
   
   for(i in 1:nbreaks) {
@@ -108,12 +108,12 @@ gh <- function(year = NULL, mlen = NULL, ss = NULL, K = NULL, Linf = NULL,
   if (is.null(Linf)) stop("Linf not specified")
   if (is.null(Lc)) stop("Lc not specified")
   if (length(mlen) != length(year)) stop("vectors have different lengths")
-    
+  
   if (is.null(nbreaks)) stop("Number of mortality breaks not specified")
   if (nbreaks > 0 & is.null(styrs)) stop("Starting guesses for years of mortality breaks not specified")
   if (nbreaks > 0 & length(styrs) != nbreaks) stop("Number of starting guesses for years of mortality breaks not equal to number of mortality breaks")
   if (nbreaks > 0 & length(stZ) != nbreaks+1) stop("Number of starting guesses for Z not equal to number of mortality breaks plus one")
-    
+  
   dat <- data.frame(year = year, mlen = mlen, ss = ss)
   
   if(nbreaks == 0) {
@@ -128,7 +128,7 @@ gh <- function(year = NULL, mlen = NULL, ss = NULL, K = NULL, Linf = NULL,
     results <- optim(stpar, return_LL, method = "BFGS", dat = dat, nbreaks = nbreaks, K = K, Linf = Linf, Lc = Lc, 
                      control = list(maxit = 1e+06, abstol = 1e-07), hessian = TRUE)
   }
-    
+  
   npar <- length(results$par) + 1
   AIC <- 2 * results$value + 2 * npar
   
