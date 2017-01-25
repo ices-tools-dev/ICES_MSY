@@ -2,6 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-/data/
+#/data/
 /output/
 README.html
