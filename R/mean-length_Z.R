@@ -51,14 +51,14 @@ neph_Lbar <- function(input, Lc){
 # Read in the data and format it
 #################################################
 
-input_lenfreq <- read.csv('ICES_MSY/data/nep-2829/LFD/nep2829_LFD_males.csv')
-input_effort <- read.csv('ICES_MSY/data/nep-2829/LFD/nep-2829_effort.csv')
+input_lenfreq <- read.csv('ICES_MSY/data/nep/LFD/nep_LFD_males.csv')
+input_effort <- read.csv('ICES_MSY/data/nep/LFD/nep_effort.csv')
 # input_lenfreq <- read.csv('length_freq_file.csv')
 # input_effort <- read.csv('effort_file.csv')
 colnames(input_lenfreq)[1] <- "Length"
 input_effort <- input_effort[input_effort$Year %in% c(2000:2014),]
 
-name <- "nep2829"
+name <- "nep"
 sex <- "M"
 K <- 0.2
 Linf <- 70
