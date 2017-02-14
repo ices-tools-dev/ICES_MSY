@@ -3,7 +3,7 @@
 #####################################################################
 # Adapted from T. Miethe and C. Silva, WKLIFE-V, Oct2015
 
-ICE_LFD <- function(file_path = "~/",
+ICE_LFD <- function(file_path = "",
                    startyear = 2000,
                    endyear = 2014,
                    country = "XYZ",

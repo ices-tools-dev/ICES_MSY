@@ -9,7 +9,9 @@ rm(list = ls())
 ####################
 library(reshape2)
 library(lattice)
-source("~/ICES_MSY/R/ICE_LFD.R")
+library(knitr)
+source("R/ICE_LFD.R")
+source("R/lbi_table.R")
 
 ####################
 # Input parameters #
@@ -43,7 +45,7 @@ stock = "nep"
 # mw, fw, nsw - dataframes names for mean weights for males, females or unsexed
 
 # ICE_LFD() will format InterCatch Exchange (what submitters use) data files.
-ic_list <- ICE_LFD(file_path = "~/ICES_MSY/data/nep/",
+ic_list <- ICE_LFD(file_path = "data/nep/",
                    startyear = startyear,
                    endyear = endyear,
                    country = "XYZ",
@@ -79,7 +81,7 @@ if(MeanLengthLB){
 
 length_plot <- function(length_data, 
                         ClassInt = 2,
-                        filename = "~/length_distribution.png",
+                        filename = "length_distribution.png",
                         save_plot = FALSE) {
 
 
@@ -142,7 +144,8 @@ length_plot <- function(length_data,
 
 length_plot(length_data,
             ClassInt = 2,
-            save_plot = FALSE)
+            filename = "output/length_plot.png",
+            save_plot = TRUE)
 
 # step 6 final decision on regrouping fill in! 
   ClassInt <- 2
@@ -278,11 +281,11 @@ length_plot(length_data,
     
   }
   
-
+lbi_table(Ind)
 
 ###################################################################################################
 ## step 3 plot indicator time series per sex
-  file_path <- "~/ICES_MSY/output/"
+  file_path <- "output/"
   
   
 for(s in 1:length(S)){

@@ -2,7 +2,7 @@
 # Length-based Spawner per recruit #
 ####################################
 rm(list = ls())
-source("~/ICES_MSY/R/LB-SPR_functions.R")
+source("R/LB-SPR_functions.R")
 
 # # Test LBSPR Function 
 # FM <- 0.9
@@ -18,7 +18,7 @@ source("~/ICES_MSY/R/LB-SPR_functions.R")
 # Fit to Empirical Data #
 #########################
 # Import Length Data
-RawDat <- read.csv("~/ICES_MSY/data/nep/LFD/nep_LFD_males.csv")
+RawDat <- read.csv("data/nep/LFD/nep_LFD_males.csv")
 colnames(RawDat)[1] <- "CL"
 colnames(RawDat)[-1] <- gsub("X", "", colnames(RawDat)[-1])
 
@@ -52,7 +52,7 @@ rslts <- data.frame(year=2000:2014,
 col <- 2
 
 # To plot fits
-png(filename="~/ICES_MSY/output/nep_fits.png", 
+png(filename="output/nep_fits.png", 
     width = 8,
     height = 6,
     units="in",

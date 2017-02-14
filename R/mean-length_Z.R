@@ -29,11 +29,11 @@ library(data.table)
 library(reshape2)
 
 # Modification for discrete (annual) reproduction
-source('/R/gedamke.hoenig_BFGS_discrete.r')
+source('R/gedamke.hoenig_BFGS_discrete.r')
 # THoG model
-source('/R/mleneffort.r')
+source('R/mleneffort.r')
 # YPR estimator
-source('/R/ypr_ml.r')
+source('R/ypr_ml.r')
 
 # Function to calculate mean lengths
 neph_Lbar <- function(input, Lc){
@@ -53,8 +53,8 @@ neph_Lbar <- function(input, Lc){
 # Read in the data and format it
 #################################################
 
-input_lenfreq <- read.csv('/data/nep/LFD/nep_LFD_males.csv')
-input_effort <- read.csv('/data/nep/LFD/nep_effort.csv')
+input_lenfreq <- read.csv('data/nep/LFD/nep_LFD_males.csv')
+input_effort <- read.csv('data/nep/LFD/nep_effort.csv')
 # input_lenfreq <- read.csv('length_freq_file.csv')
 # input_effort <- read.csv('effort_file.csv')
 colnames(input_lenfreq)[1] <- "Length"
