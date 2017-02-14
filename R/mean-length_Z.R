@@ -29,9 +29,11 @@ library(data.table)
 library(reshape2)
 
 # Modification for discrete (annual) reproduction
-source('~/ICES_MSY/R/gedamke.hoenig_BFGS_discrete.r')
+source('/R/gedamke.hoenig_BFGS_discrete.r')
 # THoG model
-source('~/ICES_MSY/R/mleneffort.r')
+source('/R/mleneffort.r')
+# YPR estimator
+source('/R/ypr_ml.r')
 
 # Function to calculate mean lengths
 neph_Lbar <- function(input, Lc){
@@ -51,8 +53,8 @@ neph_Lbar <- function(input, Lc){
 # Read in the data and format it
 #################################################
 
-input_lenfreq <- read.csv('~/ICES_MSY/data/nep/LFD/nep_LFD_males.csv')
-input_effort <- read.csv('~/ICES_MSY/data/nep/LFD/nep_effort.csv')
+input_lenfreq <- read.csv('/data/nep/LFD/nep_LFD_males.csv')
+input_effort <- read.csv('/data/nep/LFD/nep_effort.csv')
 # input_lenfreq <- read.csv('length_freq_file.csv')
 # input_effort <- read.csv('effort_file.csv')
 colnames(input_lenfreq)[1] <- "Length"
@@ -215,3 +217,22 @@ mlen_effort(year = ml_thog$Year,
             stq = c(1), 
             stM = c(.3), est.M = F)
 
+######################################
+# YPR estimation for reference points
+######################################
+
+# Three Zs
+# two change: Z = .41 -> .67 -> .43, aic = 37 
+MLZ(year = ml_gh$Year,
+   mlen = ml_gh$mlen, 
+   ss = ml_gh$ss,
+   K = K, 
+   Linf = Linf, 
+   t0 = -0.15,
+   Lc = Lc, 
+   nbreaks = 2,
+   styrs = c(2002, 2006),
+   stZ = c(.3, .6, .3),
+   M = 0.3,
+   a = 0.00043,
+   b = 3.160)
