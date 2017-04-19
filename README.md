@@ -33,7 +33,7 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = estimates F/M and compares with reference points from Per-Recruit analysis (requires weight and maturity parameters). 
  *	Data format required
- *	Running the model
+ *	Running the model [shiny app](http://barefootecologist.com.au/lbspr)
  *	Interpreting the results
 
 *	[Length-based indicators](https://raw.githubusercontent.com/ices-tools-dev/ICES_MSY/master/R/LBindicators.R) (LBI)
@@ -41,26 +41,11 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = Range of indicators and their expected values when exploitation is consistent with conservation of large and immature individuals, optimal yield and MSY
  *	Data format required
- *	Running the model
+ *	Running the model [shiny app](https://scott.shinyapps.io/LBIndicator_shiny/)
  *	Interpreting the results
 
-*	S6
- *	Data needed
- *	Assumptions
- *	Provides 
- *	Data format required
- *	Running the model
- *	Interpreting the results
 
 ###	Biomass dynamics models
-
-*	CMSY
- *  Data needed = time series of catch
- *  Assumptions = many
- *  Provides F/F<sub>MSY</sub> and B/MSY B<sub>trigger</sub>
- *  Data format required
- *  Running the model
- *	Interpreting the results
 
 *	SPiCT
  *	Data needed = time series of catch (by weight) and biomass index
