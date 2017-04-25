@@ -28,7 +28,7 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Running the model
  *	Interpreting the results
 
-*	[Length-based Spawning Potential Ratio](https://raw.githubusercontent.com/ices-tools-dev/ICES_MSY/master/R/LB-SPR_functions.R)  (LB-SPR)
+*	[Length-based Spawning Potential Ratio](https://raw.githubusercontent.com/ices-tools-dev/ICES_MSY/master/R/LBSPR.R)  (LB-SPR)
  *	Data needed = proportion-at-length in catch (in a single year) and biological parameters: L<sub>inf</sub> and M/K
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = estimates F/M and compares with reference points from Per-Recruit analysis (requires weight and maturity parameters). 
@@ -36,7 +36,7 @@ Participants will be given access to this web interface for running SPiCT and ac
  *	Running the model [shiny app](http://barefootecologist.com.au/lbspr)
  *	Interpreting the results
 
-*	[Length-based indicators](https://raw.githubusercontent.com/ices-tools-dev/ICES_MSY/master/R/LBindicators.R) (LBI)
+*	[Length-based indicators](https://raw.githubusercontent.com/ices-tools-dev/ICES_MSY/master/R/LBI.R) (LBI)
  *	Data needed = proportion-at-length in catch (single year), length at first capture in fishery (estimated from length frequency data), biological parameters (L<sub>inf</sub> and length-at-maturity)
  *	Assumptions = recruitment, fishery selection and F constant over time, fishery selection asymptotic
  *	Output = Range of indicators and their expected values when exploitation is consistent with conservation of large and immature individuals, optimal yield and MSY
